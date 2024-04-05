@@ -1,0 +1,29 @@
+﻿@page
+@model Administracion_Base_de_datos_Proyecto_Final.Pages.Client.InventarioModel
+@{
+}
+<br />
+<h2>Lista de Inventario</h2>
+
+<a class="btn btn-primary btn-sm" href='/Clientes/Create'> Añadir Nuevo Ítem al Inventario</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID de Inventario</th>
+            <th>Número de Habitación</th>
+            <th>Nombre del Ítem</th>
+            <th>Cantidad</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.listInventario)
+        {
+            <tr>
+                <td>@item.IDInventario</td>
+                <td>@item.NumeroHabitacion</td>
+                <td>@item.NombreItem</td>
+                <td>@item.Cantidad</td>
+            </tr>
+        }
+    </tbody>
+</table>

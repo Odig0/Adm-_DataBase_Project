@@ -1,0 +1,29 @@
+﻿@page
+@model Administracion_Base_de_datos_Proyecto_Final.Pages.Client.ServiciosModel
+@{
+}
+<br />
+<h2>Lista de Servicios</h2>
+
+<a class="btn btn-primary btn-sm" href='/Clientes/Create'> Agregar Nuevo Servicio</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID de Servicio</th>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Precio</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.listServicios)
+        {
+            <tr>
+                <td>@item.IDServicio</td>
+                <td>@item.Nombre</td>
+                <td>@item.Descripcion</td>
+                <td>@item.Precio</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,33 @@
+﻿@page
+@model Administracion_Base_de_datos_Proyecto_Final.Pages.Client.ReservaModel
+@{
+}
+<br />
+<h2>Lista de Reservas</h2>
+
+<a class="btn btn-primary btn-sm" href='/Clientes/Create'> Crear Nueva Reserva</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID de Reserva</th>
+            <th>ID de Huésped</th>
+            <th>Número de Habitación</th>
+            <th>Fecha de Entrada</th>
+            <th>Fecha de Salida</th>
+            <th>Precio Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.listReservas)
+        {
+            <tr>
+                <td>@item.IDReserva</td>
+                <td>@item.IDHuesped</td>
+                <td>@item.NumeroHabitacion</td>
+                <td>@item.FechaDeEntrada</td>
+                <td>@item.FechaDeSalida</td>
+                <td>@item.PrecioTotal</td>
+            </tr>
+        }
+    </tbody>
+</table>

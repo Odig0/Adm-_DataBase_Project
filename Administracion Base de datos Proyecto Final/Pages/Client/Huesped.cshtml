@@ -1,0 +1,35 @@
+﻿@page
+@model Administracion_Base_de_datos_Proyecto_Final.Pages.Client.HuespedModel
+@{
+}
+<br />
+<h2>Lista de Huéspedes</h2>
+
+<a class="btn btn-primary btn-sm" href='/Clientes/Create'> Crear Nuevo Huésped</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID de Huésped</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Fecha de Nacimiento</th>
+            <th>Dirección</th>
+            <th>Teléfono</th>
+            <th>Correo Electrónico</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.listHuespedes)
+        {
+            <tr>
+                <td>@item.IDHuesped</td>
+                <td>@item.Nombre</td>
+                <td>@item.Apellido</td>
+                <td>@item.FechaDeNacimiento</td>
+                <td>@item.Direccion</td>
+                <td>@item.Telefono</td>
+                <td>@item.CorreoElectronico</td>
+            </tr>
+        }
+    </tbody>
+</table>

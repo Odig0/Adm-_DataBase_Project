@@ -1,0 +1,39 @@
+﻿@page
+@model Administracion_Base_de_datos_Proyecto_Final.Pages.Client.PersonalModel
+@{
+}
+<br />
+<h2>Lista de Personal</h2>
+
+<a class="btn btn-primary btn-sm" href='/Clientes/Create'> Agregar Nuevo Personal</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID de Personal</th>
+            <th>Hotel ID</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Posición</th>
+            <th>Salario</th>
+            <th>Fecha de Nacimiento</th>
+            <th>Teléfono</th>
+            <th>Fecha de Contratación</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.listPersonal)
+        {
+            <tr>
+                <td>@item.IDPersonal</td>
+                <td>@item.HotelID</td>
+                <td>@item.Nombre</td>
+                <td>@item.Apellido</td>
+                <td>@item.Posicion</td>
+                <td>@item.Salario</td>
+                <td>@item.FechaDeNacimiento</td>
+                <td>@item.Telefono</td>
+                <td>@item.FechaDeContratacion</td>
+            </tr>
+        }
+    </tbody>
+</table>

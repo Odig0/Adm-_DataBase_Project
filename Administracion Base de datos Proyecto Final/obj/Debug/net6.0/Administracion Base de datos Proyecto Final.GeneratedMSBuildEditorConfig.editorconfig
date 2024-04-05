@@ -1,0 +1,85 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Administracion_Base_de_datos_Proyecto_Final
+build_property.RootNamespace = Administracion_Base_de_datos_Proyecto_Final
+build_property.ProjectDir = C:\Users\diego\source\repos\Administracion Base de datos Proyecto Final\Administracion Base de datos Proyecto Final\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\diego\source\repos\Administracion Base de datos Proyecto Final\Administracion Base de datos Proyecto Final
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/diego/source/repos/Administracion Base de datos Proyecto Final/Administracion Base de datos Proyecto Final/Pages/Client/Habitacion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50XEhhYml0YWNpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/diego/source/repos/Administracion Base de datos Proyecto Final/Administracion Base de datos Proyecto Final/Pages/Client/Huesped.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50XEh1ZXNwZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/diego/source/repos/Administracion Base de datos Proyecto Final/Administracion Base de datos Proyecto Final/Pages/Client/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/diego/source/repos/Administracion Base de datos Proyecto Final/Administracion Base de datos Proyecto Final/Pages/Client/Inventario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50XEludmVudGFyaW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/diego/source/repos/Administracion Base de datos Proyecto Final/Administracion Base de datos Proyecto Final/Pages/Client/Pago.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50XFBhZ28uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/diego/source/repos/Administracion Base de datos Proyecto Final/Administracion Base de datos Proyecto Final/Pages/Client/Personal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50XFBlcnNvbmFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/diego/source/repos/Administracion Base de datos Proyecto Final/Administracion Base de datos Proyecto Final/Pages/Client/Reserva.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50XFJlc2VydmEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/diego/source/repos/Administracion Base de datos Proyecto Final/Administracion Base de datos Proyecto Final/Pages/Client/ReservaServicios.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50XFJlc2VydmFTZXJ2aWNpb3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/diego/source/repos/Administracion Base de datos Proyecto Final/Administracion Base de datos Proyecto Final/Pages/Client/Servicios.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50XFNlcnZpY2lvcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/diego/source/repos/Administracion Base de datos Proyecto Final/Administracion Base de datos Proyecto Final/Pages/Client/TipoHabitación.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50XFRpcG9IYWJpdGFjacOzbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/diego/source/repos/Administracion Base de datos Proyecto Final/Administracion Base de datos Proyecto Final/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/diego/source/repos/Administracion Base de datos Proyecto Final/Administracion Base de datos Proyecto Final/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/diego/source/repos/Administracion Base de datos Proyecto Final/Administracion Base de datos Proyecto Final/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/diego/source/repos/Administracion Base de datos Proyecto Final/Administracion Base de datos Proyecto Final/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/diego/source/repos/Administracion Base de datos Proyecto Final/Administracion Base de datos Proyecto Final/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/diego/source/repos/Administracion Base de datos Proyecto Final/Administracion Base de datos Proyecto Final/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/diego/source/repos/Administracion Base de datos Proyecto Final/Administracion Base de datos Proyecto Final/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-k4lvpcybau

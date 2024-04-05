@@ -1,0 +1,38 @@
+C:\Users\diego\source\repos\Administracion Base de datos Proyecto Final\Administracion Base de datos Proyecto Final\obj\Debug\net6.0\Administracion Base de datos Proyecto Final.csproj.AssemblyReference.cache
+C:\Users\diego\source\repos\Administracion Base de datos Proyecto Final\Administracion Base de datos Proyecto Final\obj\Debug\net6.0\Administracion Base de datos Proyecto Final.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\diego\source\repos\Administracion Base de datos Proyecto Final\Administracion Base de datos Proyecto Final\obj\Debug\net6.0\Administracion Base de datos Proyecto Final.AssemblyInfoInputs.cache
+C:\Users\diego\source\repos\Administracion Base de datos Proyecto Final\Administracion Base de datos Proyecto Final\obj\Debug\net6.0\Administracion Base de datos Proyecto Final.AssemblyInfo.cs
+C:\Users\diego\source\repos\Administracion Base de datos Proyecto Final\Administracion Base de datos Proyecto Final\obj\Debug\net6.0\Administracion Base de datos Proyecto Final.csproj.CoreCompileInputs.cache
+C:\Users\diego\source\repos\Administracion Base de datos Proyecto Final\Administracion Base de datos Proyecto Final\obj\Debug\net6.0\Administracion Base de datos Proyecto Final.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\diego\source\repos\Administracion Base de datos Proyecto Final\Administracion Base de datos Proyecto Final\obj\Debug\net6.0\Administracion Base de datos Proyecto Final.RazorAssemblyInfo.cache
+C:\Users\diego\source\repos\Administracion Base de datos Proyecto Final\Administracion Base de datos Proyecto Final\obj\Debug\net6.0\Administracion Base de datos Proyecto Final.RazorAssemblyInfo.cs
+C:\Users\diego\source\repos\Administracion Base de datos Proyecto Final\Administracion Base de datos Proyecto Final\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\diego\source\repos\Administracion Base de datos Proyecto Final\Administracion Base de datos Proyecto Final\bin\Debug\net6.0\appsettings.json
+C:\Users\diego\source\repos\Administracion Base de datos Proyecto Final\Administracion Base de datos Proyecto Final\bin\Debug\net6.0\Administracion Base de datos Proyecto Final.staticwebassets.runtime.json
+C:\Users\diego\source\repos\Administracion Base de datos Proyecto Final\Administracion Base de datos Proyecto Final\bin\Debug\net6.0\Administracion Base de datos Proyecto Final.exe
+C:\Users\diego\source\repos\Administracion Base de datos Proyecto Final\Administracion Base de datos Proyecto Final\bin\Debug\net6.0\Administracion Base de datos Proyecto Final.deps.json
+C:\Users\diego\source\repos\Administracion Base de datos Proyecto Final\Administracion Base de datos Proyecto Final\bin\Debug\net6.0\Administracion Base de datos Proyecto Final.runtimeconfig.json
+C:\Users\diego\source\repos\Administracion Base de datos Proyecto Final\Administracion Base de datos Proyecto Final\bin\Debug\net6.0\Administracion Base de datos Proyecto Final.dll
+C:\Users\diego\source\repos\Administracion Base de datos Proyecto Final\Administracion Base de datos Proyecto Final\bin\Debug\net6.0\Administracion Base de datos Proyecto Final.pdb
+C:\Users\diego\source\repos\Administracion Base de datos Proyecto Final\Administracion Base de datos Proyecto Final\bin\Debug\net6.0\System.Data.SqlClient.dll
+C:\Users\diego\source\repos\Administracion Base de datos Proyecto Final\Administracion Base de datos Proyecto Final\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+C:\Users\diego\source\repos\Administracion Base de datos Proyecto Final\Administracion Base de datos Proyecto Final\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+C:\Users\diego\source\repos\Administracion Base de datos Proyecto Final\Administracion Base de datos Proyecto Final\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+C:\Users\diego\source\repos\Administracion Base de datos Proyecto Final\Administracion Base de datos Proyecto Final\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\diego\source\repos\Administracion Base de datos Proyecto Final\Administracion Base de datos Proyecto Final\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\diego\source\repos\Administracion Base de datos Proyecto Final\Administracion Base de datos Proyecto Final\obj\Debug\net6.0\staticwebassets\msbuild.Administracion Base de datos Proyecto Final.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\diego\source\repos\Administracion Base de datos Proyecto Final\Administracion Base de datos Proyecto Final\obj\Debug\net6.0\staticwebassets\msbuild.build.Administracion Base de datos Proyecto Final.props
+C:\Users\diego\source\repos\Administracion Base de datos Proyecto Final\Administracion Base de datos Proyecto Final\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Administracion Base de datos Proyecto Final.props
+C:\Users\diego\source\repos\Administracion Base de datos Proyecto Final\Administracion Base de datos Proyecto Final\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Administracion Base de datos Proyecto Final.props
+C:\Users\diego\source\repos\Administracion Base de datos Proyecto Final\Administracion Base de datos Proyecto Final\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\diego\source\repos\Administracion Base de datos Proyecto Final\Administracion Base de datos Proyecto Final\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\diego\source\repos\Administracion Base de datos Proyecto Final\Administracion Base de datos Proyecto Final\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\diego\source\repos\Administracion Base de datos Proyecto Final\Administracion Base de datos Proyecto Final\obj\Debug\net6.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\diego\source\repos\Administracion Base de datos Proyecto Final\Administracion Base de datos Proyecto Final\obj\Debug\net6.0\scopedcss\bundle\Administracion Base de datos Proyecto Final.styles.css
+C:\Users\diego\source\repos\Administracion Base de datos Proyecto Final\Administracion Base de datos Proyecto Final\obj\Debug\net6.0\scopedcss\projectbundle\Administracion Base de datos Proyecto Final.bundle.scp.css
+C:\Users\diego\source\repos\Administracion Base de datos Proyecto Final\Administracion Base de datos Proyecto Final\obj\Debug\net6.0\Administracion Base de datos Proyecto Final.csproj.CopyComplete
+C:\Users\diego\source\repos\Administracion Base de datos Proyecto Final\Administracion Base de datos Proyecto Final\obj\Debug\net6.0\Administracion Base de datos Proyecto Final.dll
+C:\Users\diego\source\repos\Administracion Base de datos Proyecto Final\Administracion Base de datos Proyecto Final\obj\Debug\net6.0\refint\Administracion Base de datos Proyecto Final.dll
+C:\Users\diego\source\repos\Administracion Base de datos Proyecto Final\Administracion Base de datos Proyecto Final\obj\Debug\net6.0\Administracion Base de datos Proyecto Final.pdb
+C:\Users\diego\source\repos\Administracion Base de datos Proyecto Final\Administracion Base de datos Proyecto Final\obj\Debug\net6.0\Administracion Base de datos Proyecto Final.genruntimeconfig.cache
+C:\Users\diego\source\repos\Administracion Base de datos Proyecto Final\Administracion Base de datos Proyecto Final\obj\Debug\net6.0\ref\Administracion Base de datos Proyecto Final.dll

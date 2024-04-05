@@ -1,0 +1,31 @@
+﻿@page
+@model Administracion_Base_de_datos_Proyecto_Final.Pages.Client.PagoModel
+@{
+}
+<br />
+<h2>Lista de Pagos</h2>
+
+<a class="btn btn-primary btn-sm" href='/Clientes/Create'> Realizar Nuevo Pago</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID de Pago</th>
+            <th>ID de Reserva</th>
+            <th>Monto</th>
+            <th>Fecha de Pago</th>
+            <th>Método de Pago</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.listPagos)
+        {
+            <tr>
+                <td>@item.IDPago</td>
+                <td>@item.IDReserva</td>
+                <td>@item.Monto</td>
+                <td>@item.FechaDePago</td>
+                <td>@item.MetodoPago</td>
+            </tr>
+        }
+    </tbody>
+</table>

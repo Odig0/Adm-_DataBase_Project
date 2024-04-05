@@ -1,0 +1,44 @@
+﻿@page
+@model Administracion_Base_de_datos_Proyecto_Final.Pages.Client.IndexModel
+@{
+}
+<br />
+<h2>Lista de Hoteles</h2>
+
+
+
+<a class="btn btn-primary btn-sm" href='/Clientes/Create'> Crear Nuevo Cliente</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Dirección</th>
+            <th>Teléfono</th>
+            <th>Correo Electrónico</th>
+            <th>Estrellas</th>
+            <th>Hora de Entrada</th>
+            <th>Hora de Salida</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.listHoteles)
+        {
+            <tr>
+                <td>@item.HotelID</td>
+                <td>@item.Nombre</td>
+                <td>@item.Dirección</td>
+                <td>@item.Teléfono</td>
+                <td>@item.CorreoElectrónico</td>
+                <td>@item.Estrellas</td>
+                <td>@item.HoraDeEntrada</td>
+                <td>@item.HoraDeSalida</td>
+
+                <td>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

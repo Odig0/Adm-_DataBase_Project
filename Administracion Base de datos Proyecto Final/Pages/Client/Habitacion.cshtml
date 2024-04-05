@@ -1,0 +1,29 @@
+﻿@page
+@model Administracion_Base_de_datos_Proyecto_Final.Pages.Client.HabitacionModel
+@{
+}
+<br />
+<h2>Lista de Habitaciones</h2>
+
+<a class="btn btn-primary btn-sm" href='/Clientes/Create'> Crear Nueva Habitación</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Número de Habitación</th>
+            <th>Hotel ID</th>
+            <th>Tipo ID</th>
+            <th>Estado</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.listHabitaciones)
+        {
+            <tr>
+                <td>@item.NumeroHabitacion</td>
+                <td>@item.HotelID</td>
+                <td>@item.TipoID</td>
+                <td>@item.Estado</td>
+            </tr>
+        }
+    </tbody>
+</table>

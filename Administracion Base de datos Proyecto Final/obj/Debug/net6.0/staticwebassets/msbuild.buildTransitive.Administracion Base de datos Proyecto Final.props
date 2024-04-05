@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Administracion Base de datos Proyecto Final.props" />
+</Project>

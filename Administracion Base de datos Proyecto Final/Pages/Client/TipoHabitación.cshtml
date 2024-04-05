@@ -1,0 +1,31 @@
+﻿@page
+@model Administracion_Base_de_datos_Proyecto_Final.Pages.Client.TipoHabitaciónModel
+@{
+}
+<br />
+<h2>Lista de Tipos de Habitación</h2>
+
+<a class="btn btn-primary btn-sm" href='/Clientes/Create'> Crear Nuevo Tipo de Habitación</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Precio por Noche</th>
+            <th>Capacidad</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.listTipoHabitaciones)
+        {
+            <tr>
+                <td>@item.TipoID</td>
+                <td>@item.Nombre</td>
+                <td>@item.Descripción</td>
+                <td>@item.PrecioPorNoche</td>
+                <td>@item.Capacidad</td>
+            </tr>
+        }
+    </tbody>
+</table>
