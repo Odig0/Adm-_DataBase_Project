@@ -1,7 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System;
 using System.Data.SqlClient;
-using static Administracion_Base_de_datos_Proyecto_Final.Pages.Client.Hotel;
+using Administracion_Base_de_datos_Proyecto_Final.Pages.Client;
 
 namespace Administracion_Base_de_datos_Proyecto_Final.Pages.Client.Create
 {
@@ -18,11 +19,18 @@ namespace Administracion_Base_de_datos_Proyecto_Final.Pages.Client.Create
         public void OnPost()
         {
             // Obtener los valores de los campos del formulario
-            Hotel.HotelID = Convert.ToInt32(Request.Form["hotelID"]);
             Hotel.Nombre = Request.Form["nombre"];
             Hotel.CorreoElectrónico = Request.Form["email"];
             Hotel.Teléfono = Request.Form["telefono"];
             Hotel.Dirección = Request.Form["direccion"];
+            Hotel.Estrellas = Convert.ToInt32(Request.Form["estrellas"]);
+            string horaDeEntradaForm = Request.Form["horaDeEntrada"];
+            Hotel.HoraDeEntrada = !string.IsNullOrEmpty(horaDeEntradaForm) ? TimeSpan.Parse(horaDeEntradaForm) : TimeSpan.FromHours(8); // Por ejemplo, 8:00 AM
+
+            // Obtener la hora de salida del formulario y asignar un valor predeterminado si está vacía
+            string horaDeSalidaForm = Request.Form["horaDeSalida"];
+            Hotel.HoraDeSalida = !string.IsNullOrEmpty(horaDeSalidaForm) ? TimeSpan.Parse(horaDeSalidaForm) : TimeSpan.FromHours(17); // Por ejemplo, 5:00 PM
+
 
             if (string.IsNullOrEmpty(Hotel.Nombre) || string.IsNullOrEmpty(Hotel.CorreoElectrónico) ||
                 string.IsNullOrEmpty(Hotel.Teléfono) || string.IsNullOrEmpty(Hotel.Dirección))
@@ -31,23 +39,25 @@ namespace Administracion_Base_de_datos_Proyecto_Final.Pages.Client.Create
                 return;
             }
 
-            // Guardar el nuevo cliente en la base de datos
+            // Guardar el nuevo hotel en la base de datos
             try
             {
-                string connectionString = "Data Source=Localhost;Initial Catalog=Proyecto;Integrated Security=True";
+                String connectionString = "Data Source=DESKTOP-2J8LJOL;Initial Catalog=Hotel;Integrated Security=True";
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    string sql = "INSERT INTO clientes " +
-                                 "(nombre,email,telefono,direccion) VALUES " +
-                                 "(@nombre,@email,@telefono,@direccion)";
+                    string sql = "INSERT INTO Hotel (Nombre, Dirección, Teléfono, CorreoElectrónico, Estrellas, HoraDeEntrada, HoraDeSalida) " +
+                                 "VALUES (@nombre, @direccion, @telefono, @correoElectronico, @estrellas, @horaEntrada, @horaSalida)";
 
                     using (SqlCommand command = new SqlCommand(sql, connection))
                     {
                         command.Parameters.AddWithValue("@nombre", Hotel.Nombre);
-                        command.Parameters.AddWithValue("@email", Hotel.CorreoElectrónico);
-                        command.Parameters.AddWithValue("@telefono", Hotel.Teléfono);
                         command.Parameters.AddWithValue("@direccion", Hotel.Dirección);
+                        command.Parameters.AddWithValue("@telefono", Hotel.Teléfono);
+                        command.Parameters.AddWithValue("@correoElectronico", Hotel.CorreoElectrónico);
+                        command.Parameters.AddWithValue("@estrellas", Hotel.Estrellas);
+                        command.Parameters.AddWithValue("@horaEntrada", Hotel.HoraDeEntrada);
+                        command.Parameters.AddWithValue("@horaSalida", Hotel.HoraDeSalida);
 
                         command.ExecuteNonQuery();
                     }
@@ -59,13 +69,16 @@ namespace Administracion_Base_de_datos_Proyecto_Final.Pages.Client.Create
                 return;
             }
 
-            // Limpiar los campos después de agregar el cliente
+            // Limpiar los campos después de agregar el hotel
             Hotel.Nombre = "";
-            Hotel.CorreoElectrónico = "";
-            Hotel.Teléfono = "";
             Hotel.Dirección = "";
+            Hotel.Teléfono = "";
+            Hotel.CorreoElectrónico = "";
+            Hotel.Estrellas = 0;
+            Hotel.HoraDeEntrada = TimeSpan.Zero;
+            Hotel.HoraDeSalida = TimeSpan.Zero;
 
-            successMessage = "Nuevo Cliente agregado";
+            successMessage = "Nuevo Hotel agregado";
 
             Response.Redirect("/Clientes/Index");
         }

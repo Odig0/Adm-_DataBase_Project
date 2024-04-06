@@ -18,53 +18,54 @@
     <div class="row mb-3">
         <label class="col-sm-3 col-form-label">Nombre</label>
         <div class="col-sm-6">
-            <input type="text" class="form-control" name="nombre" value="@Model.Hotel.nombre" />
+            <input type="text" class="form-control" name="nombre" value="@Model.Hotel.Nombre" />
         </div>
     </div>
 
     <div class="row mb-3">
-        <label class="col-sm-3 col-form-label">Email</label>
+        <label class="col-sm-3 col-form-label">Dirección</label>
         <div class="col-sm-6">
-            <input type="text" class="form-control" name="email" value="@Model.Hotel.email" />
+            <input type="text" class="form-control" name="direccion" value="@Model.Hotel.Dirección" />
         </div>
     </div>
 
     <div class="row mb-3">
-        <label class="col-sm-3 col-form-label">Telefono</label>
+        <label class="col-sm-3 col-form-label">Teléfono</label>
         <div class="col-sm-6">
-            <input type="text" class="form-control" name="telefono" value="@Model.Hotel.telefono" />
+            <input type="text" class="form-control" name="telefono" value="@Model.Hotel.Teléfono" />
         </div>
     </div>
 
     <div class="row mb-3">
-        <label class="col-sm-3 col-form-label">Direccion</label>
+        <label class="col-sm-3 col-form-label">Correo Electrónico</label>
         <div class="col-sm-6">
-            <input type="text" class="form-control" name="direccion" value="@Model.Hotel.direccion" />
+            <input type="text" class="form-control" name="email" value="@Model.Hotel.CorreoElectrónico" />
         </div>
     </div>
 
-
-    @if (Model.sucessMessage.Length > 0)
-    {
-        <div class="row mb-3">
-            <div class="col-sm-9">
-                <div class='alert alert-success alert-dismissible fade show' role='alert'>
-                    <strong>@Model.sucessMessage</strong>
-                    <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='close'></button>
-                </div>
-            </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Estrellas</label>
+        <div class="col-sm-6">
+            <input type="number" class="form-control" name="estrellas" value="@Model.Hotel.Estrellas" />
         </div>
-    }
+    </div>
 
+   <div class="row mb-3">
+    <label class="col-sm-3 col-form-label">Hora de Entrada</label>
+    <div class="col-sm-6">
+        <input type="time" class="form-control" name="horaDeEntrada" value="@Model.Hotel.HoraDeEntrada.ToString(@"hh\:mm")" />
+    </div>
+</div>
 
 
     <div class="row mb-3">
-        <div class="offset-sm-3 col-sm-3 d-grid">
-            <button type="submit" class="btn btn-primary">Enviar</button>
-        </div>
-        <div class="col-sm-3 d-grid">
-            <a class="btn btn-outline-primary" href="/" role="button">Cancelar</a>
+        <label class="col-sm-3 col-form-label">Hora de Salida</label>
+        <div class="col-sm-6">
+            <input type="time" class="form-control" name="horaDeSalida" value="@Model.Hotel.HoraDeSalida.ToString("hh\\:mm")" />
         </div>
     </div>
 
+    <!-- Agregar más campos según sea necesario -->
+
+    <button type="submit" class="btn btn-primary">Guardar</button>
 </form>
