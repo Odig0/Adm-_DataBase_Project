@@ -1,0 +1,27 @@
+﻿@page
+@using System.Data.SqlClient;
+
+@{
+    try
+    {
+        String idInventario = Request.Query["IDInventario"];
+        String connectionString = "Data Source=DESKTOP-2J8LJOL;Initial Catalog=Hotel;Integrated Security=True";
+        using (SqlConnection connection = new SqlConnection(connectionString))
+        {
+            connection.Open();
+
+            String sql = "DELETE FROM Inventario WHERE IDInventario=@IDInventario"; // Cambio de la tabla y del nombre del parámetro
+            using (SqlCommand command = new SqlCommand(sql, connection))
+            {
+                command.Parameters.AddWithValue("@IDInventario", idInventario); // Cambio del nombre del parámetro
+
+                command.ExecuteNonQuery();
+            }
+        }
+    }
+    catch (Exception ex)
+    {
+        // Manejo de errores
+    }
+    Response.Redirect("/Clientes/Index");
+}

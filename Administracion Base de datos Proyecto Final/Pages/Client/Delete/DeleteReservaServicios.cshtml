@@ -1,0 +1,26 @@
+﻿@page
+@using System.Data.SqlClient;
+
+@{
+    try
+    {
+        String idReservaServicio = Request.Query["IDReservaServicio"];
+        String connectionString = "Data Source=DESKTOP-2J8LJOL;Initial Catalog=Hotel;Integrated Security=True";
+        using (SqlConnection connection = new SqlConnection(connectionString))
+        {
+            connection.Open();
+
+            String sql = "DELETE FROM ReservaServicio WHERE IDReservaServicio=@IDReservaServicio"; 
+            using (SqlCommand command = new SqlCommand(sql, connection))
+            {
+                command.Parameters.AddWithValue("@IDReservaServicio", idReservaServicio);
+                command.ExecuteNonQuery();
+            }
+        }
+    }
+    catch (Exception ex)
+    {
+
+    }
+    Response.Redirect("/Clientes/Index");
+}
