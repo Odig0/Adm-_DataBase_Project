@@ -1,0 +1,30 @@
+﻿@page
+@using System.Data.SqlClient;
+
+@{
+    try
+    {
+        string hotelId = Request.Query["HotelID"]; // Obtener el ID del hotel de la URL
+        string connectionString = "Data Source=DESKTOP-2J8LJOL;Initial Catalog=Hotel;Integrated Security=True";
+
+        // Consulta para eliminar el hotel por su ID
+        string eliminarSql = "DELETE FROM Hotel WHERE HotelID = @HotelID";
+
+        using (SqlConnection connection = new SqlConnection(connectionString))
+        {
+            connection.Open();
+
+            // Ejecutar la consulta para eliminar el hotel
+            using (SqlCommand eliminarCommand = new SqlCommand(eliminarSql, connection))
+            {
+                eliminarCommand.Parameters.AddWithValue("@HotelID", hotelId);
+                eliminarCommand.ExecuteNonQuery(); // Eliminar el hotel de la base de datos
+            }
+        }
+    }
+    catch (Exception ex)
+    {
+        // Manejo de errores (opcional)
+    }
+    /*Response.Redirect("/Client/Index"); */ // Redireccionar a la página de inicio después de eliminar el hotel
+}

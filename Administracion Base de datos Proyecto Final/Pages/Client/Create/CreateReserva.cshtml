@@ -1,0 +1,53 @@
+﻿@page
+@model Administracion_Base_de_datos_Proyecto_Final.Pages.Client.Create.CreateReservaModel
+@{
+}
+<br />
+<h2>Nueva Reserva</h2>
+
+@if (Model.errorMessage.Length > 0)
+{
+    <div class='alert alert-warning alert-dismissible fade show' role='alert'>
+        <strong>@Model.errorMessage</strong>
+        <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='cerrar'></button>
+    </div>
+}
+
+<form method="POST">
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">ID de Huésped</label>
+        <div class="col-sm-6">
+            <input type="number" class="form-control" name="idHuesped" value="@Model.Reserva.IDHuesped" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Número de Habitación</label>
+        <div class="col-sm-6">
+            <input type="number" class="form-control" name="numeroHabitacion" value="@Model.Reserva.NumeroHabitacion" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Fecha de Entrada</label>
+        <div class="col-sm-6">
+            <input type="date" class="form-control" name="fechaEntrada" value="@Model.Reserva.FechaDeEntrada.ToString("yyyy-MM-dd")" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Fecha de Salida</label>
+        <div class="col-sm-6">
+            <input type="date" class="form-control" name="fechaSalida" value="@Model.Reserva.FechaDeSalida.ToString("yyyy-MM-dd")" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Precio Total</label>
+        <div class="col-sm-6">
+            <input type="number" class="form-control" name="precioTotal" value="@Model.Reserva.PrecioTotal" />
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Guardar</button>
+</form>

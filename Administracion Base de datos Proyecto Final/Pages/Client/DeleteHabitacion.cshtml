@@ -1,0 +1,26 @@
+﻿@page
+@using System.Data.SqlClient;
+
+@{
+    try
+    {
+        string numeroHabitacion = Request.Query["NúmeroHabitación"];
+        string connectionString = "Data Source=DESKTOP-2J8LJOL;Initial Catalog=Hotel;Integrated Security=True";
+        using (SqlConnection connection = new SqlConnection(connectionString))
+        {
+            connection.Open();
+
+            string sql = "DELETE FROM Habitacion WHERE NumeroHabitación = @NúmeroHabitación";
+            using (SqlCommand command = new SqlCommand(sql, connection))
+            {
+                command.Parameters.AddWithValue("@NumeroHabitacion", numeroHabitacion);
+                command.ExecuteNonQuery();
+            }
+        }
+    }
+    catch (Exception ex)
+    {
+        // Manejo de errores (opcional)
+    }
+    Response.Redirect("/Client/Habitacion");
+}

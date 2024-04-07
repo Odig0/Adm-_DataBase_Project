@@ -16,16 +16,52 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\diego\source\repos\Administracion Base de datos Proyecto Final\Administracion Base de datos Proyecto Final
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/diego/source/repos/Administracion Base de datos Proyecto Final/Administracion Base de datos Proyecto Final/Pages/Client/Create/CreateHabitacion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50XENyZWF0ZVxDcmVhdGVIYWJpdGFjaW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/diego/source/repos/Administracion Base de datos Proyecto Final/Administracion Base de datos Proyecto Final/Pages/Client/Create/CreateHotel.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50XENyZWF0ZVxDcmVhdGVIb3RlbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/diego/source/repos/Administracion Base de datos Proyecto Final/Administracion Base de datos Proyecto Final/Pages/Client/Delete/DeleteHabitacion.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50XERlbGV0ZVxEZWxldGVIYWJpdGFjaW9uLmNzaHRtbA==
+[C:/Users/diego/source/repos/Administracion Base de datos Proyecto Final/Administracion Base de datos Proyecto Final/Pages/Client/Create/CreateHuesped.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50XENyZWF0ZVxDcmVhdGVIdWVzcGVkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/diego/source/repos/Administracion Base de datos Proyecto Final/Administracion Base de datos Proyecto Final/Pages/Client/Delete/DeleteHotel.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50XERlbGV0ZVxEZWxldGVIb3RlbC5jc2h0bWw=
+[C:/Users/diego/source/repos/Administracion Base de datos Proyecto Final/Administracion Base de datos Proyecto Final/Pages/Client/Create/CreateInventario.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50XENyZWF0ZVxDcmVhdGVJbnZlbnRhcmlvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/diego/source/repos/Administracion Base de datos Proyecto Final/Administracion Base de datos Proyecto Final/Pages/Client/Create/CreatePago.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50XENyZWF0ZVxDcmVhdGVQYWdvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/diego/source/repos/Administracion Base de datos Proyecto Final/Administracion Base de datos Proyecto Final/Pages/Client/Create/CreatePersonal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50XENyZWF0ZVxDcmVhdGVQZXJzb25hbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/diego/source/repos/Administracion Base de datos Proyecto Final/Administracion Base de datos Proyecto Final/Pages/Client/Create/CreateReserva.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50XENyZWF0ZVxDcmVhdGVSZXNlcnZhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/diego/source/repos/Administracion Base de datos Proyecto Final/Administracion Base de datos Proyecto Final/Pages/Client/Create/CreateReservaServicios.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50XENyZWF0ZVxDcmVhdGVSZXNlcnZhU2VydmljaW9zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/diego/source/repos/Administracion Base de datos Proyecto Final/Administracion Base de datos Proyecto Final/Pages/Client/Create/CreateServicios.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50XENyZWF0ZVxDcmVhdGVTZXJ2aWNpb3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/diego/source/repos/Administracion Base de datos Proyecto Final/Administracion Base de datos Proyecto Final/Pages/Client/Create/CreateTipoHabitacion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50XENyZWF0ZVxDcmVhdGVUaXBvSGFiaXRhY2lvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/diego/source/repos/Administracion Base de datos Proyecto Final/Administracion Base de datos Proyecto Final/Pages/Client/DeleteHabitacion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50XERlbGV0ZUhhYml0YWNpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/diego/source/repos/Administracion Base de datos Proyecto Final/Administracion Base de datos Proyecto Final/Pages/Client/DeleteHotel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50XERlbGV0ZUhvdGVsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/diego/source/repos/Administracion Base de datos Proyecto Final/Administracion Base de datos Proyecto Final/Pages/Client/Delete/DeleteHuesped.cshtml]
