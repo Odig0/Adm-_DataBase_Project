@@ -96,6 +96,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50XERlbGV0ZVxEZWxldGVUaXBvSGFiaXRhY2lvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/diego/source/repos/Administracion Base de datos Proyecto Final/Administracion Base de datos Proyecto Final/Pages/Client/Edit/EditHabitacion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50XEVkaXRcRWRpdEhhYml0YWNpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/diego/source/repos/Administracion Base de datos Proyecto Final/Administracion Base de datos Proyecto Final/Pages/Client/Edit/EditHotel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50XEVkaXRcRWRpdEhvdGVsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/diego/source/repos/Administracion Base de datos Proyecto Final/Administracion Base de datos Proyecto Final/Pages/Client/Habitacion.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2xpZW50XEhhYml0YWNpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
