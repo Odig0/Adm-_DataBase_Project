@@ -1,0 +1,70 @@
+﻿@page
+@model Administracion_Base_de_datos_Proyecto_Final.Pages.Client.Edit.EditPersonalModel
+@{
+}
+
+<br />
+<h2>Editar Personal</h2>
+
+<form method="POST">
+    <input type="hidden" name="IDPersonal" value="@Model.personal.IDPersonal" />
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Hotel ID</label>
+        <div class="col-sm-6">
+            <input type="number" class="form-control" name="HotelID" value="@Model.personal.HotelID" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Nombre</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="Nombre" value="@Model.personal.Nombre" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Apellido</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="Apellido" value="@Model.personal.Apellido" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Posición</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="Posicion" value="@Model.personal.Posicion" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Salario</label>
+        <div class="col-sm-6">
+            <input type="number" class="form-control" name="Salario" value="@Model.personal.Salario" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Fecha de Nacimiento</label>
+        <div class="col-sm-6">
+            <input type="datetime-local" class="form-control" name="FechaDeNacimiento" value="@Model.personal.FechaDeNacimiento.ToString("yyyy-MM-ddTHH:mm")" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Teléfono</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="Telefono" value="@Model.personal.Telefono" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Fecha de Contratación</label>
+        <div class="col-sm-6">
+            <input type="datetime-local" class="form-control" name="FechaDeContratacion" value="@Model.personal.FechaDeContratacion.ToString("yyyy-MM-ddTHH:mm")" />
+        </div>
+    </div>
+
+    <!-- Agregar más campos según sea necesario -->
+
+    <button type="submit" class="btn btn-primary">Guardar</button>
+</form>

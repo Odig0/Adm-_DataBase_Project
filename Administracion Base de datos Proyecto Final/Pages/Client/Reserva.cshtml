@@ -2,7 +2,7 @@
 @model Administracion_Base_de_datos_Proyecto_Final.Pages.Client.ReservaModel
 
 <br />
-<h2>Lista de Reservas</h2>
+<h2>Reserva Habitaciones</h2>
 
 <a class="btn btn-primary btn-sm" href='/Client/Create/CreateReserva'> Crear Nueva Reserva</a>
 
@@ -29,7 +29,7 @@
                 <td>@item.FechaDeSalida</td>
                 <td>@item.PrecioTotal</td>
                 <td>
-                    <a class="btn btn-primary btn-sm" href='/Client/Edit'>Editar</a>
+                    <a class="btn btn-primary btn-sm" href='/Client/Edit/EditReserva?IDReserva=@item.IDReserva'>Editar</a>
                     <a class="btn btn-primary btn-sm" href='/Client/DeleteReserva?IDReserva=@item.IDReserva'>Borrar</a>
                 </td>
             </tr>

@@ -1,0 +1,55 @@
+﻿@page
+@model Administracion_Base_de_datos_Proyecto_Final.Pages.Client.Edit.EditHuespedModel
+@{
+}
+<br />
+<h2>Editar Huesped</h2>
+
+<form method="POST">
+    <input type="hidden" name="IDHuesped" value="@Model.huesped.IDHuesped" />
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Nombre</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="Nombre" value="@Model.huesped.Nombre" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Apellido</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="Apellido" value="@Model.huesped.Apellido" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Fecha de Nacimiento</label>
+        <div class="col-sm-6">
+            <input type="date" class="form-control" name="FechaDeNacimiento" value="@Model.huesped.FechaDeNacimiento.ToString("yyyy-MM-dd")" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Dirección</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="Direccion" value="@Model.huesped.Direccion" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Teléfono</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="Telefono" value="@Model.huesped.Telefono" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Correo Electrónico</label>
+        <div class="col-sm-6">
+            <input type="email" class="form-control" name="CorreoElectronico" value="@Model.huesped.CorreoElectronico" />
+        </div>
+    </div>
+
+    <!-- Agregar más campos según sea necesario -->
+
+    <button type="submit" class="btn btn-primary">Guardar</button>
+</form>

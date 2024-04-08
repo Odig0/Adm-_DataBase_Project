@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System;
 using System.Data.SqlClient;
 
 namespace Administracion_Base_de_datos_Proyecto_Final.Pages.Client.Edit
@@ -14,17 +15,17 @@ namespace Administracion_Base_de_datos_Proyecto_Final.Pages.Client.Edit
         {
             try
             {
-                string numeroHabitacion = Request.Query["NúmeroHabitacion"];
+                string numeroHabitacion = Request.Query["NumeroHabitacion"];
                 string connectionString = "Data Source=DESKTOP-2J8LJOL;Initial Catalog=Hotel;Integrated Security=True";
 
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    string sql = "SELECT NúmeroHabitación, HotelID, TipoID, Estado FROM Habitación WHERE NúmeroHabitación = @NúmeroHabitación";
+                    string sql = "SELECT NumeroHabitacion, HotelID, TipoID, Estado FROM Habitacion WHERE NumeroHabitacion = @NumeroHabitacion";
 
                     using (SqlCommand command = new SqlCommand(sql, connection))
                     {
-                        command.Parameters.AddWithValue("@NúmeroHabitación", numeroHabitacion);
+                        command.Parameters.AddWithValue("@NumeroHabitacion", numeroHabitacion);
 
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
@@ -52,7 +53,7 @@ namespace Administracion_Base_de_datos_Proyecto_Final.Pages.Client.Edit
                 errorMessage = "El ID del hotel proporcionado no es válido.";
                 return;
             }
-            habitacion.NumeroHabitacion = Convert.ToInt32(Request.Form["NúmeroHabitación"]);
+            habitacion.NumeroHabitacion = Convert.ToInt32(Request.Form["NumeroHabitacion"]);
             habitacion.HotelID = Convert.ToInt32(Request.Form["HotelID"]);
             habitacion.TipoID = Convert.ToInt32(Request.Form["TipoID"]);
             habitacion.Estado = Request.Form["Estado"];
@@ -64,13 +65,13 @@ namespace Administracion_Base_de_datos_Proyecto_Final.Pages.Client.Edit
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    string sql = "UPDATE Habitación " +
+                    string sql = "UPDATE Habitacion " +
                                  "SET HotelID = @HotelID, TipoID = @TipoID, Estado = @Estado " +
-                                 "WHERE NúmeroHabitación = @NúmeroHabitación";
+                                 "WHERE NumeroHabitacion = @NumeroHabitacion";
 
                     using (SqlCommand command = new SqlCommand(sql, connection))
                     {
-                        command.Parameters.AddWithValue("@NúmeroHabitación", habitacion.NumeroHabitacion);
+                        command.Parameters.AddWithValue("@NumeroHabitacion", habitacion.NumeroHabitacion);
                         command.Parameters.AddWithValue("@HotelID", habitacion.HotelID);
                         command.Parameters.AddWithValue("@TipoID", habitacion.TipoID);
                         command.Parameters.AddWithValue("@Estado", habitacion.Estado);
@@ -85,6 +86,7 @@ namespace Administracion_Base_de_datos_Proyecto_Final.Pages.Client.Edit
             {
                 errorMessage = ex.Message;
             }
+            Response.Redirect("/Client/Habitacion");
         }
     }
 }

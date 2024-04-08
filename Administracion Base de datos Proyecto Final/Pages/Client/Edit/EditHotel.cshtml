@@ -4,65 +4,56 @@
 }
 
 <br />
-<h2>Nuevo Cliente</h2>
-
-@if (Model.errorMessage.Length > 0)
-{
-    <div class='alert alert-warning alert-dismissible fade show' role='alert'>
-        <strong>@Model.errorMessage</strong>
-        <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='cerrar'></button>
-    </div>
-}
+<h2>Editar Hotel</h2>
 
 <form method="POST">
-    <input type="hidden" name="HotelID" value="@Model.hotel.HotelID " />
+    <input type="hidden" name="HotelID" value="@Model.hotel.HotelID" />
     <div class="row mb-3">
         <label class="col-sm-3 col-form-label">Nombre</label>
         <div class="col-sm-6">
-            <input type="text" class="form-control" name="nombre" value="@Model.hotel.Nombre" />
+            <input type="text" class="form-control" name="Nombre" value="@Model.hotel.Nombre" />
         </div>
     </div>
 
     <div class="row mb-3">
         <label class="col-sm-3 col-form-label">Dirección</label>
         <div class="col-sm-6">
-            <input type="text" class="form-control" name="direccion" value="@Model.hotel.Direccion" />
+            <input type="text" class="form-control" name="Direccion" value="@Model.hotel.Direccion" />
         </div>
     </div>
 
     <div class="row mb-3">
         <label class="col-sm-3 col-form-label">Teléfono</label>
         <div class="col-sm-6">
-            <input type="text" class="form-control" name="telefono" value="@Model.hotel.Telefono" />
+            <input type="text" class="form-control" name="Telefono" value="@Model.hotel.Telefono" />
         </div>
     </div>
 
     <div class="row mb-3">
         <label class="col-sm-3 col-form-label">Correo Electrónico</label>
         <div class="col-sm-6">
-            <input type="text" class="form-control" name="email" value="@Model.hotel.CorreoElectronico" />
+            <input type="text" class="form-control" name="CorreoElectronico" value="@Model.hotel.CorreoElectronico" />
         </div>
     </div>
 
     <div class="row mb-3">
         <label class="col-sm-3 col-form-label">Estrellas</label>
         <div class="col-sm-6">
-            <input type="number" class="form-control" name="estrellas" value="@Model.hotel.Estrellas" />
+            <input type="number" class="form-control" name="Estrellas" value="@Model.hotel.Estrellas" />
         </div>
     </div>
 
     <div class="row mb-3">
         <label class="col-sm-3 col-form-label">Hora de Entrada</label>
         <div class="col-sm-6">
-            <input type="time" class="form-control" name="horaDeEntrada" value="@Model.hotel.HoraDeEntrada.ToString(@"hh\:mm")" />
+            <input type="time" class="form-control" name="HoraDeEntrada" value="@Model.hotel.HoraDeEntrada.ToString(@"hh\:mm")" />
         </div>
     </div>
-
 
     <div class="row mb-3">
         <label class="col-sm-3 col-form-label">Hora de Salida</label>
         <div class="col-sm-6">
-            <input type="time" class="form-control" name="horaDeSalida" value="@Model.hotel.HoraDeSalida.ToString("hh\\:mm")" />
+            <input type="time" class="form-control" name="HoraDeSalida" value="@Model.hotel.HoraDeSalida.ToString(@"hh\:mm")" />
         </div>
     </div>
 

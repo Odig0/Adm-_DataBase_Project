@@ -1,5 +1,7 @@
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System;
+using Microsoft.AspNetCore.Mvc;
+using System.Net.Security;
 using System.Data.SqlClient;
 
 namespace Administracion_Base_de_datos_Proyecto_Final.Pages.Client.Edit
@@ -12,20 +14,17 @@ namespace Administracion_Base_de_datos_Proyecto_Final.Pages.Client.Edit
 
         public void OnGet()
         {
+            string hotelID = Request.Query["HotelID"];
             try
             {
-                string hotelID = Request.Query["HotelID"];
                 string connectionString = "Data Source=DESKTOP-2J8LJOL;Initial Catalog=Hotel;Integrated Security=True";
-
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    string sql = "SELECT  Nombre, Dirección, Teléfono, CorreoElectrónico, Estrellas, HoraDeEntrada, HoraDeSalida FROM Hotel WHERE HotelID = @HotelID";
-
+                    string sql = "SELECT Nombre, Direccion, Telefono, CorreoElectronico, Estrellas, HoraDeEntrada, HoraDeSalida FROM Hotel WHERE HotelID = @HotelID";
                     using (SqlCommand command = new SqlCommand(sql, connection))
                     {
                         command.Parameters.AddWithValue("@HotelID", hotelID);
-
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
                             if (reader.Read())
@@ -53,9 +52,9 @@ namespace Administracion_Base_de_datos_Proyecto_Final.Pages.Client.Edit
         {
             hotel.HotelID = Convert.ToInt32(Request.Form["HotelID"]);
             hotel.Nombre = Request.Form["Nombre"];
-            hotel.Direccion = Request.Form["Dirección"];
-            hotel.Telefono = Request.Form["Teléfono"];
-            hotel.CorreoElectronico = Request.Form["CorreoElectrónico"];
+            hotel.Direccion = Request.Form["Direccion"];
+            hotel.Telefono = Request.Form["Telefono"];
+            hotel.CorreoElectronico = Request.Form["CorreoElectronico"];
             hotel.Estrellas = Convert.ToInt32(Request.Form["Estrellas"]);
             hotel.HoraDeEntrada = TimeSpan.Parse(Request.Form["HoraDeEntrada"]);
             hotel.HoraDeSalida = TimeSpan.Parse(Request.Form["HoraDeSalida"]);
@@ -63,36 +62,33 @@ namespace Administracion_Base_de_datos_Proyecto_Final.Pages.Client.Edit
             try
             {
                 string connectionString = "Data Source=DESKTOP-2J8LJOL;Initial Catalog=Hotel;Integrated Security=True";
-
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
                     string sql = "UPDATE Hotel " +
-                                 "SET Nombre = @Nombre, Dirección = @Dirección, Telefono = @Telefono, CorreoElectrónico = @CorreoElectrónico, Estrellas = @Estrellas, HoraDeEntrada = @HoraDeEntrada, HoraDeSalida = @HoraDeSalida " +
+                                 "SET Nombre = @Nombre, Direccion = @Direccion, Telefono = @Telefono, CorreoElectronico = @CorreoElectronico, Estrellas = @Estrellas, HoraDeEntrada = @HoraDeEntrada, HoraDeSalida = @HoraDeSalida " +
                                  "WHERE HotelID = @HotelID";
-
                     using (SqlCommand command = new SqlCommand(sql, connection))
                     {
                         command.Parameters.AddWithValue("@HotelID", hotel.HotelID);
                         command.Parameters.AddWithValue("@Nombre", hotel.Nombre);
-                        command.Parameters.AddWithValue("@Dirección", hotel.Direccion);
+                        command.Parameters.AddWithValue("@Direccion", hotel.Direccion);
                         command.Parameters.AddWithValue("@Telefono", hotel.Telefono);
-                        command.Parameters.AddWithValue("@CorreoElectrónico", hotel.CorreoElectronico);
+                        command.Parameters.AddWithValue("@CorreoElectronico", hotel.CorreoElectronico);
                         command.Parameters.AddWithValue("@Estrellas", hotel.Estrellas);
                         command.Parameters.AddWithValue("@HoraDeEntrada", hotel.HoraDeEntrada);
                         command.Parameters.AddWithValue("@HoraDeSalida", hotel.HoraDeSalida);
 
                         command.ExecuteNonQuery();
-                        var Telefono = " ";
                     }
                 }
-
                 successMessage = "Hotel actualizado correctamente";
             }
             catch (Exception ex)
             {
                 errorMessage = ex.Message;
             }
+            Response.Redirect("/Client/Index");
         }
     }
 }

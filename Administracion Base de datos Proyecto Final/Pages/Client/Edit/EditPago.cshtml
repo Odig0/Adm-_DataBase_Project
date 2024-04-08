@@ -1,0 +1,42 @@
+﻿@page
+@model Administracion_Base_de_datos_Proyecto_Final.Pages.Client.Edit.EditPagoModel
+@{
+}
+
+<br />
+<h2>Editar Pago</h2>
+
+<form method="POST">
+    <input type="hidden" name="IDPago" value="@Model.pago.IDPago" />
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">ID de Reserva</label>
+        <div class="col-sm-6">
+            <input type="number" class="form-control" name="IDReserva" value="@Model.pago.IDReserva" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Monto</label>
+        <div class="col-sm-6">
+            <input type="number" class="form-control" name="Monto" value="@Model.pago.Monto" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Fecha de Pago</label>
+        <div class="col-sm-6">
+            <input type="datetime-local" class="form-control" name="FechaDePago" value="@Model.pago.FechaDePago.ToString("yyyy-MM-ddTHH:mm")" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Método de Pago</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="MetodoPago" value="@Model.pago.MetodoPago" />
+        </div>
+    </div>
+
+    <!-- Agregar más campos según sea necesario -->
+
+    <button type="submit" class="btn btn-primary">Guardar</button>
+</form>

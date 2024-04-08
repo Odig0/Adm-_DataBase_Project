@@ -4,36 +4,28 @@
 }
 
 <br />
-<h2>Nueva Habitación</h2>
-
-@if (Model.errorMessage.Length > 0)
-{
-    <div class='alert alert-warning alert-dismissible fade show' role='alert'>
-        <strong>@Model.errorMessage</strong>
-        <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='cerrar'></button>
-    </div>
-}
+<h2>Editar Habitación</h2>
 
 <form method="POST">
-    <input type="hidden" name="HotelID" value="@Model.habitacion.NumeroHabitacion " />
+    <input type="hidden" name="NumeroHabitacion" value="@Model.habitacion.NumeroHabitacion" />
     <div class="row mb-3">
         <label class="col-sm-3 col-form-label">Hotel ID</label>
         <div class="col-sm-6">
-            <input type="number" class="form-control" name="hotelId" value="@Model.habitacion.HotelID" />
+            <input type="number" class="form-control" name="HotelID" value="@Model.habitacion.HotelID" />
         </div>
     </div>
 
     <div class="row mb-3">
         <label class="col-sm-3 col-form-label">Tipo ID</label>
         <div class="col-sm-6">
-            <input type="number" class="form-control" name="tipoId" value="@Model.habitacion.TipoID" />
+            <input type="number" class="form-control" name="TipoID" value="@Model.habitacion.TipoID" />
         </div>
     </div>
 
     <div class="row mb-3">
         <label class="col-sm-3 col-form-label">Estado</label>
         <div class="col-sm-6">
-            <input type="text" class="form-control" name="estado" value="@Model.habitacion.Estado" />
+            <input type="text" class="form-control" name="Estado" value="@Model.habitacion.Estado" />
         </div>
     </div>
 

@@ -1,0 +1,49 @@
+﻿@page
+@model Administracion_Base_de_datos_Proyecto_Final.Pages.Client.Edit.EditReservaModel
+@{
+}
+<br />
+<h2>Editar Reserva</h2>
+
+<form method="POST">
+    <input type="hidden" name="IDReserva" value="@Model.reserva.IDReserva" />
+
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">ID Huesped</label>
+        <div class="col-sm-6">
+            <input type="number" class="form-control" name="IDHuesped" value="@Model.reserva.IDHuesped" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Número de Habitación</label>
+        <div class="col-sm-6">
+            <input type="number" class="form-control" name="NumeroHabitacion" value="@Model.reserva.NumeroHabitacion" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Fecha de Entrada</label>
+        <div class="col-sm-6">
+            <input type="datetime-local" class="form-control" name="FechaDeEntrada" value="@Model.reserva.FechaDeEntrada.ToString("yyyy-MM-ddTHH:mm")" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Fecha de Salida</label>
+        <div class="col-sm-6">
+            <input type="datetime-local" class="form-control" name="FechaDeSalida" value="@Model.reserva.FechaDeSalida.ToString("yyyy-MM-ddTHH:mm")" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Precio Total</label>
+        <div class="col-sm-6">
+            <input type="number" class="form-control" name="PrecioTotal" value="@Model.reserva.PrecioTotal" />
+        </div>
+    </div>
+
+    <!-- Agregar más campos según sea necesario -->
+
+    <button type="submit" class="btn btn-primary">Guardar</button>
+</form>
