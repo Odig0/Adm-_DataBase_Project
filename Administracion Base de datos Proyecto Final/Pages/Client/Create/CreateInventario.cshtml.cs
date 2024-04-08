@@ -17,7 +17,7 @@ namespace Administracion_Base_de_datos_Proyecto_Final.Pages.Client.Create
         public void OnPost()
         {
             // Obtener los valores de los campos del formulario
-            Inventario.NumeroHabitacion = Convert.ToInt32(Request.Form["númeroHabitación"]);
+            Inventario.NumeroHabitacion = Convert.ToInt32(Request.Form["numeroHabitacion"]);
             Inventario.NombreItem = Request.Form["nombreItem"];
             Inventario.Cantidad = Convert.ToInt32(Request.Form["cantidad"]);
 
@@ -34,12 +34,12 @@ namespace Administracion_Base_de_datos_Proyecto_Final.Pages.Client.Create
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    string sql = "INSERT INTO Inventario (NúmeroHabitación, NombreItem, Cantidad) " +
-                                 "VALUES (@númeroHabitación, @nombreItem, @cantidad)";
+                    string sql = "INSERT INTO Inventario (NumeroHabitacion, NombreItem, Cantidad) " +
+                                 "VALUES (@numeroHabitacion, @nombreItem, @cantidad)";
 
                     using (SqlCommand command = new SqlCommand(sql, connection))
                     {
-                        command.Parameters.AddWithValue("@númeroHabitación", Inventario.NumeroHabitacion);
+                        command.Parameters.AddWithValue("@numeroHabitacion", Inventario.NumeroHabitacion);
                         command.Parameters.AddWithValue("@nombreItem", Inventario.NombreItem);
                         command.Parameters.AddWithValue("@cantidad", Inventario.Cantidad);
 
@@ -60,7 +60,7 @@ namespace Administracion_Base_de_datos_Proyecto_Final.Pages.Client.Create
 
             successMessage = "Nuevo inventario agregado";
 
-            Response.Redirect("/Client/Index");
+            Response.Redirect("/Client/Inventario");
         }
     }
 }

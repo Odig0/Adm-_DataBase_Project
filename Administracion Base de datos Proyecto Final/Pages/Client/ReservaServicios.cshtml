@@ -12,6 +12,7 @@
             <th>ID de Reserva de Servicio</th>
             <th>ID de Servicio</th>
             <th>ID de Reserva</th>
+            <th>Acciones</th>
         </tr>
     </thead>
     <tbody>
@@ -22,8 +23,8 @@
                 <td>@item.IDServicio</td>
                 <td>@item.IDReserva</td>
                 <td>
-                    <a class="btn btn-primary btn-sm" href='/Client/Edit'>Editar</a>
-                    <a class="btn btn-primary btn-sm" href='/Client/Delete'>Borrar</a>
+                    <a class="btn btn-primary btn-sm" href='/Client/Edit/EditReservaServicios'>Editar</a>
+                    <a class="btn btn-primary btn-sm" href='/Client/DeleteReservaServicios?IDReservaServicio=@item.IDReservaServicio'>Borrar</a>
                 </td>
             </tr>
         }

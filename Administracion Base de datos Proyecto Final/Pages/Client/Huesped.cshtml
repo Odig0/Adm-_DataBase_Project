@@ -1,7 +1,6 @@
 ﻿@page
 @model Administracion_Base_de_datos_Proyecto_Final.Pages.Client.HuespedModel
-@{
-}
+
 <br />
 <h2>Lista de Huéspedes</h2>
 
@@ -16,6 +15,7 @@
             <th>Dirección</th>
             <th>Teléfono</th>
             <th>Correo Electrónico</th>
+            <th>Acciones</th>
         </tr>
     </thead>
     <tbody>
@@ -31,7 +31,7 @@
                 <td>@item.CorreoElectronico</td>
                 <td>
                     <a class="btn btn-primary btn-sm" href='/Client/Edit'>Editar</a>
-                    <a class="btn btn-primary btn-sm" href='/Client/Delete'>Borrar</a>
+                    <a class="btn btn-primary btn-sm" href='/Client/DeleteHuesped?IDHuesped=@item.IDHuesped'>Borrar</a>
                 </td>
             </tr>
         }

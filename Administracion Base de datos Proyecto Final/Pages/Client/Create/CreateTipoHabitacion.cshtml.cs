@@ -6,7 +6,7 @@ namespace Administracion_Base_de_datos_Proyecto_Final.Pages.Client.Create
 {
     public class CreateTipoHabitacionModel : PageModel
     {
-        public TipoHabitación TipoHabitación = new TipoHabitación();
+        public TipoHabitacion TipoHabitación = new TipoHabitacion();
         public string errorMessage = "";
         public string successMessage = "";
 
@@ -18,11 +18,11 @@ namespace Administracion_Base_de_datos_Proyecto_Final.Pages.Client.Create
         {
             // Obtener los valores de los campos del formulario
             TipoHabitación.Nombre = Request.Form["nombre"];
-            TipoHabitación.Descripción = Request.Form["descripcion"];
+            TipoHabitación.Descripcion = Request.Form["descripcion"];
             TipoHabitación.PrecioPorNoche = Convert.ToDecimal(Request.Form["precioPorNoche"]);
             TipoHabitación.Capacidad = Convert.ToInt32(Request.Form["capacidad"]);
 
-            if (string.IsNullOrEmpty(TipoHabitación.Nombre) || string.IsNullOrEmpty(TipoHabitación.Descripción) || TipoHabitación.PrecioPorNoche <= 0 || TipoHabitación.Capacidad <= 0)
+            if (string.IsNullOrEmpty(TipoHabitación.Nombre) || string.IsNullOrEmpty(TipoHabitación.Descripcion) || TipoHabitación.PrecioPorNoche <= 0 || TipoHabitación.Capacidad <= 0)
             {
                 errorMessage = "Todos los campos son requeridos y deben ser válidos";
                 return;
@@ -35,13 +35,13 @@ namespace Administracion_Base_de_datos_Proyecto_Final.Pages.Client.Create
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    string sql = "INSERT INTO TipoHabitacion (Nombre, Descripción, PrecioPorNoche, Capacidad) " +
+                    string sql = "INSERT INTO TipoHabitacion (Nombre, Descripcion, PrecioPorNoche, Capacidad) " +
                                  "VALUES (@nombre, @descripcion, @precioPorNoche, @capacidad)";
 
                     using (SqlCommand command = new SqlCommand(sql, connection))
                     {
                         command.Parameters.AddWithValue("@nombre", TipoHabitación.Nombre);
-                        command.Parameters.AddWithValue("@descripcion", TipoHabitación.Descripción);
+                        command.Parameters.AddWithValue("@descripcion", TipoHabitación.Descripcion);
                         command.Parameters.AddWithValue("@precioPorNoche", TipoHabitación.PrecioPorNoche);
                         command.Parameters.AddWithValue("@capacidad", TipoHabitación.Capacidad);
 
@@ -57,7 +57,7 @@ namespace Administracion_Base_de_datos_Proyecto_Final.Pages.Client.Create
 
             // Limpiar los campos después de agregar el tipo de habitación
             TipoHabitación.Nombre = "";
-            TipoHabitación.Descripción = "";
+            TipoHabitación.Descripcion = "";
             TipoHabitación.PrecioPorNoche = 0;
             TipoHabitación.Capacidad = 0;
 

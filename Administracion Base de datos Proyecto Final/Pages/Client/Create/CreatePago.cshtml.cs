@@ -35,7 +35,7 @@ namespace Administracion_Base_de_datos_Proyecto_Final.Pages.Client.Create
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    string sql = "INSERT INTO Pago (IDReserva, Monto, FechaDePago, MétodoPago) " +
+                    string sql = "INSERT INTO Pago (IDReserva, Monto, FechaDePago, MetodoPago) " +
                                  "VALUES (@IDReserva, @monto, @fechaDePago, @metodoPago)";
 
                     using (SqlCommand command = new SqlCommand(sql, connection))

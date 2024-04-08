@@ -16,7 +16,7 @@ namespace Administracion_Base_de_datos_Proyecto_Final.Pages.Client
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    string sql = "SELECT * FROM Reserva";
+                    string sql = "SELECT * FROM ReservaHabitacion ";
                     using (SqlCommand command = new SqlCommand(sql, connection))
                     {
                         using (SqlDataReader reader = command.ExecuteReader())

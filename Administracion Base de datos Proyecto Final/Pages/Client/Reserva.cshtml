@@ -1,11 +1,11 @@
 ﻿@page
 @model Administracion_Base_de_datos_Proyecto_Final.Pages.Client.ReservaModel
-@{
-}
+
 <br />
 <h2>Lista de Reservas</h2>
 
 <a class="btn btn-primary btn-sm" href='/Client/Create/CreateReserva'> Crear Nueva Reserva</a>
+
 <table class="table">
     <thead>
         <tr>
@@ -15,6 +15,7 @@
             <th>Fecha de Entrada</th>
             <th>Fecha de Salida</th>
             <th>Precio Total</th>
+            <th>Acciones</th>
         </tr>
     </thead>
     <tbody>
@@ -29,7 +30,7 @@
                 <td>@item.PrecioTotal</td>
                 <td>
                     <a class="btn btn-primary btn-sm" href='/Client/Edit'>Editar</a>
-                    <a class="btn btn-primary btn-sm" href='/Client/Delete'>Borrar</a>
+                    <a class="btn btn-primary btn-sm" href='/Client/DeleteReserva?IDReserva=@item.IDReserva'>Borrar</a>
                 </td>
             </tr>
         }

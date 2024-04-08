@@ -5,7 +5,7 @@
 <br />
 <h2>Lista de Servicios</h2>
 
-<a class="btn btn-primary btn-sm" href='/Client/Create/CreaeServicios'> Agregar Nuevo Servicio</a>
+<a class="btn btn-primary btn-sm" href='/Client/Create/CreateServicios'> Agregar Nuevo Servicio</a>
 <table class="table">
     <thead>
         <tr>
@@ -13,6 +13,7 @@
             <th>Nombre</th>
             <th>Descripción</th>
             <th>Precio</th>
+            <th>Acciones</th>
         </tr>
     </thead>
     <tbody>
@@ -24,8 +25,8 @@
                 <td>@item.Descripcion</td>
                 <td>@item.Precio</td>
                 <td>
-                    <a class="btn btn-primary btn-sm" href='/Client/Edit'>Editar</a>
-                    <a class="btn btn-primary btn-sm" href='/Client/Delete'>Borrar</a>
+                    <a class="btn btn-primary btn-sm" href='/Client/Edit/EditServicio'>Editar</a>
+                    <a class="btn btn-primary btn-sm" href='/Client/DeleteServicios?IDServicio=@item.IDServicio'>Borrar</a>
                 </td>
             </tr>
         }

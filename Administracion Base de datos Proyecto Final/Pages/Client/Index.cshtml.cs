@@ -26,9 +26,9 @@ namespace Administracion_Base_de_datos_Proyecto_Final.Pages.Client
                                 Hotel hotel = new Hotel();
                                 hotel.HotelID = reader.GetInt32(0);
                                 hotel.Nombre = reader.GetString(1);
-                                hotel.Dirección = reader.GetString(2);
-                                hotel.Teléfono = reader.GetString(3);
-                                hotel.CorreoElectrónico = reader.GetString(4);
+                                hotel.Direccion = reader.GetString(2);
+                                hotel.Telefono = reader.GetString(3);
+                                hotel.CorreoElectronico = reader.GetString(4);
                                 hotel.Estrellas = reader.GetInt32(5);
                                 hotel.HoraDeEntrada = reader.GetTimeSpan(6);
                                 hotel.HoraDeSalida = reader.GetTimeSpan(7);
@@ -50,9 +50,9 @@ namespace Administracion_Base_de_datos_Proyecto_Final.Pages.Client
     {
         public int HotelID;
         public string Nombre;
-        public string Dirección;
-        public string Teléfono;
-        public string CorreoElectrónico;
+        public string Direccion;
+        public string Telefono;
+        public string CorreoElectronico;
         public int Estrellas;
         public TimeSpan HoraDeEntrada;
         public TimeSpan HoraDeSalida;

@@ -1,7 +1,6 @@
 ﻿@page
 @model Administracion_Base_de_datos_Proyecto_Final.Pages.Client.InventarioModel
-@{
-}
+
 <br />
 <h2>Lista de Inventario</h2>
 
@@ -13,6 +12,7 @@
             <th>Número de Habitación</th>
             <th>Nombre del Ítem</th>
             <th>Cantidad</th>
+            <th>Acciones</th>
         </tr>
     </thead>
     <tbody>
@@ -25,7 +25,7 @@
                 <td>@item.Cantidad</td>
                 <td>
                     <a class="btn btn-primary btn-sm" href='/Client/Edit'>Editar</a>
-                    <a class="btn btn-primary btn-sm" href='/Client/Delete'>Borrar</a>
+                    <a class="btn btn-primary btn-sm" href='/Client/DeleteInventario?IDInventario=@item.IDInventario'>Borrar</a>
                 </td>
             </tr>
         }

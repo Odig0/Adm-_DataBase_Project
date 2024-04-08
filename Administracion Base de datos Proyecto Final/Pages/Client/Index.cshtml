@@ -1,13 +1,11 @@
 ﻿@page
 @model Administracion_Base_de_datos_Proyecto_Final.Pages.Client.IndexModel
-@{
-}
+
 <br />
 <h2>Lista de Hoteles</h2>
 
+<a class="btn btn-primary btn-sm" href='/Client/Create/CreateHotel'> Crear Nuevo Hotel</a>
 
-
-<a class="btn btn-primary btn-sm" href='/Client/Create/CreateHotel'> Crear Nuevo Cliente</a>
 <table class="table">
     <thead>
         <tr>
@@ -19,7 +17,7 @@
             <th>Estrellas</th>
             <th>Hora de Entrada</th>
             <th>Hora de Salida</th>
-
+            <th>Acciones</th>
         </tr>
     </thead>
     <tbody>
@@ -28,16 +26,15 @@
             <tr>
                 <td>@item.HotelID</td>
                 <td>@item.Nombre</td>
-                <td>@item.Dirección</td>
-                <td>@item.Teléfono</td>
-                <td>@item.CorreoElectrónico</td>
+                <td>@item.Direccion</td>
+                <td>@item.Telefono</td>
+                <td>@item.CorreoElectronico</td>
                 <td>@item.Estrellas</td>
                 <td>@item.HoraDeEntrada</td>
                 <td>@item.HoraDeSalida</td>
-
                 <td>
-                    <a class="btn btn-primary btn-sm" href='/Client/Edit/EditHotel'>Editar</a>
-                    <a class="btn btn-primary btn-sm" href='/Client/DeleteHotel'>Borrar</a>
+                    <a class="btn btn-primary btn-sm" href='/Client/Edit/EditHotel?HotelID=@item.HotelID'>Editar</a>
+                    <a class="btn btn-primary btn-sm" href='/Client/DeleteHotel?HotelID=@item.HotelID'>Borrar</a>
                 </td>
             </tr>
         }

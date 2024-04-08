@@ -34,7 +34,7 @@ namespace Administracion_Base_de_datos_Proyecto_Final.Pages.Client.Create
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    string sql = "INSERT INTO Servicio (Nombre, Descripción, Precio) " +
+                    string sql = "INSERT INTO Servicio (Nombre, Descripcion, Precio) " +
                                  "VALUES (@nombre, @descripcion, @precio)";
 
                     using (SqlCommand command = new SqlCommand(sql, connection))

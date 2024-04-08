@@ -14,6 +14,7 @@
             <th>Descripción</th>
             <th>Precio por Noche</th>
             <th>Capacidad</th>
+            <th>Acciones</th>
         </tr>
     </thead>
     <tbody>
@@ -22,12 +23,12 @@
             <tr>
                 <td>@item.TipoID</td>
                 <td>@item.Nombre</td>
-                <td>@item.Descripción</td>
+                <td>@item.Descripcion</td>
                 <td>@item.PrecioPorNoche</td>
                 <td>@item.Capacidad</td>
                 <td>
-                    <a class="btn btn-primary btn-sm" href='/Client/Edit'>Editar</a>
-                    <a class="btn btn-primary btn-sm" href='/Client/Delete'>Borrar</a>
+                    <a class="btn btn-primary btn-sm" href='/Client/Edit/EditTipoHabitacion'>Editar</a>
+                    <a class="btn btn-primary btn-sm" href='/Client/DeleteTipoHabitacion?TipoID=@item.TipoID'>Borrar</a>
                 </td>
             </tr>
         }

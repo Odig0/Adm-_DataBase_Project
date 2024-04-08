@@ -4,16 +4,16 @@
 @{
     try
     {
-        String idReserva = Request.Query["IDReserva"];
+        String idPago = Request.Query["IDPago"];
         String connectionString = "Data Source=DESKTOP-2J8LJOL;Initial Catalog=Hotel;Integrated Security=True";
         using (SqlConnection connection = new SqlConnection(connectionString))
         {
             connection.Open();
 
-            String sql = "DELETE FROM Reserva WHERE IDReserva=@IDReserva"; // Cambio de la tabla y del nombre del parámetro
+            String sql = "DELETE FROM Pago WHERE IDPago=@IDPago"; // Cambio de la tabla y del nombre del parámetro
             using (SqlCommand command = new SqlCommand(sql, connection))
             {
-                command.Parameters.AddWithValue("@IDReserva", idReserva); // Cambio del nombre del parámetro
+                command.Parameters.AddWithValue("@IDPago", idPago); // Cambio del nombre del parámetro
 
                 command.ExecuteNonQuery();
             }
@@ -23,5 +23,5 @@
     {
         // Manejo de errores
     }
-    Response.Redirect("/Clientes/Index");
+    Response.Redirect("/Client/Pago");
 }

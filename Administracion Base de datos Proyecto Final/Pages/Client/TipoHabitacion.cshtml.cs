@@ -7,7 +7,7 @@ namespace Administracion_Base_de_datos_Proyecto_Final.Pages.Client
 {
     public class TipoHabitaciónModel : PageModel
     {
-        public List<TipoHabitación> listTipoHabitaciones = new List<TipoHabitación>();
+        public List<TipoHabitacion> listTipoHabitaciones = new List<TipoHabitacion>();
         public void OnGet()
         {
             try
@@ -23,10 +23,10 @@ namespace Administracion_Base_de_datos_Proyecto_Final.Pages.Client
                         {
                             while (reader.Read())
                             {
-                                TipoHabitación tipoHabitación = new TipoHabitación();
+                                TipoHabitacion tipoHabitación = new TipoHabitacion();
                                 tipoHabitación.TipoID = reader.GetInt32(0);
                                 tipoHabitación.Nombre = reader.GetString(1);
-                                tipoHabitación.Descripción = reader.GetString(2);
+                                tipoHabitación.Descripcion = reader.GetString(2);
                                 tipoHabitación.PrecioPorNoche = reader.GetDecimal(3);
                                 tipoHabitación.Capacidad = reader.GetInt32(4);
                                 listTipoHabitaciones.Add(tipoHabitación);
@@ -44,11 +44,11 @@ namespace Administracion_Base_de_datos_Proyecto_Final.Pages.Client
     }
 
 
-    public class TipoHabitación
+    public class TipoHabitacion
     {
         public int TipoID;
         public string Nombre;
-        public string Descripción;
+        public string Descripcion;
         public decimal PrecioPorNoche;
         public int Capacidad;
     }

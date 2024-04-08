@@ -41,7 +41,7 @@ namespace Administracion_Base_de_datos_Proyecto_Final.Pages.Client.Create
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    string sql = "INSERT INTO Personal (HotelID, Nombre, Apellido, Posición, Salario, FechaDeNacimiento, Teléfono, FechaDeContratación) " +
+                    string sql = "INSERT INTO Personal (HotelID, Nombre, Apellido, Posicion, Salario, FechaDeNacimiento, Telefono, FechaDeContratacion) " +
                                  "VALUES (@hotelID, @nombre, @apellido, @posicion, @salario, @fechaDeNacimiento, @telefono, @fechaDeContratacion)";
 
                     using (SqlCommand command = new SqlCommand(sql, connection))

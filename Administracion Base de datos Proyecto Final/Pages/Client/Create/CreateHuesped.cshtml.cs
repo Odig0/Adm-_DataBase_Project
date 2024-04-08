@@ -41,7 +41,7 @@ namespace Administracion_Base_de_datos_Proyecto_Final.Pages.Client.Create
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    string sql = "INSERT INTO Huesped (Nombre, Apellido, FechaDeNacimiento, Dirección, Teléfono, CorreoElectrónico) " +
+                    string sql = "INSERT INTO Huesped (Nombre, Apellido, FechaDeNacimiento, Direccion, Telefono, CorreoElectronico) " +
                                  "VALUES (@nombre, @apellido, @fechaNacimiento, @direccion, @telefono, @correoElectronico)";
 
                     using (SqlCommand command = new SqlCommand(sql, connection))
@@ -73,7 +73,7 @@ namespace Administracion_Base_de_datos_Proyecto_Final.Pages.Client.Create
 
             successMessage = "Nuevo Huésped agregado";
 
-            Response.Redirect("/Client/Index");
+            Response.Redirect("/Client/Huesped");
         }
     }
 }

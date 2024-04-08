@@ -18,17 +18,19 @@ namespace Administracion_Base_de_datos_Proyecto_Final.Pages.Client.Create
         {
             // Obtener los valores de los campos del formulario
             Reserva.IDHuesped = Convert.ToInt32(Request.Form["idHuesped"]);
-            Reserva.NumeroHabitacion = Convert.ToInt32(Request.Form["númeroHabitación"]);
+            Reserva.NumeroHabitacion = Convert.ToInt32(Request.Form["numeroHabitacion"]);
             Reserva.FechaDeEntrada = Convert.ToDateTime(Request.Form["fechaDeEntrada"]);
             Reserva.FechaDeSalida = Convert.ToDateTime(Request.Form["fechaDeSalida"]);
             Reserva.PrecioTotal = Convert.ToDecimal(Request.Form["precioTotal"]);
 
+            DateTime year2000 = new DateTime(2000, 1, 1);
+
             if (Reserva.IDHuesped <= 0 || Reserva.NumeroHabitacion <= 0 ||
-                Reserva.FechaDeEntrada == DateTime.MinValue || Reserva.FechaDeSalida == DateTime.MinValue ||
+                Reserva.FechaDeEntrada <= year2000 || Reserva.FechaDeSalida <= Reserva.FechaDeEntrada ||
                 Reserva.PrecioTotal <= 0)
             {
                 errorMessage = "Todos los campos son requeridos y deben ser válidos";
-                return;
+                return ;
             }
 
             // Guardar la nueva reserva de habitación en la base de datos
@@ -38,13 +40,13 @@ namespace Administracion_Base_de_datos_Proyecto_Final.Pages.Client.Create
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
                     connection.Open();
-                    string sql = "INSERT INTO ReservaHabitacion (IDHuésped, NúmeroHabitación, FechaDeEntrada, FechaDeSalida, PrecioTotal) " +
-                                 "VALUES (@idHuesped, @númeroHabitación, @fechaDeEntrada, @fechaDeSalida, @precioTotal)";
+                    string sql = "INSERT INTO ReservaHabitacion (IDHuesped, NumeroHabitacion, FechaDeEntrada, FechaDeSalida, PrecioTotal) " +
+                                 "VALUES (@idHuesped, @numeroHabitacion, @fechaDeEntrada, @fechaDeSalida, @precioTotal)";
 
                     using (SqlCommand command = new SqlCommand(sql, connection))
                     {
                         command.Parameters.AddWithValue("@idHuesped", Reserva.IDHuesped);
-                        command.Parameters.AddWithValue("@númeroHabitación", Reserva.NumeroHabitacion);
+                        command.Parameters.AddWithValue("@numeroHabitacion", Reserva.NumeroHabitacion);
                         command.Parameters.AddWithValue("@fechaDeEntrada", Reserva.FechaDeEntrada);
                         command.Parameters.AddWithValue("@fechaDeSalida", Reserva.FechaDeSalida);
                         command.Parameters.AddWithValue("@precioTotal", Reserva.PrecioTotal);
@@ -68,7 +70,7 @@ namespace Administracion_Base_de_datos_Proyecto_Final.Pages.Client.Create
 
             successMessage = "Nueva reserva de habitación agregada";
 
-            Response.Redirect("/Client/Index");
+            Response.Redirect("/Client/Reserva");
         }
     }
 }

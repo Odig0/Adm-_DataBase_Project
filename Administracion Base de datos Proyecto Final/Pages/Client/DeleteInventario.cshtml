@@ -4,23 +4,26 @@
 @{
     try
     {
-        string numeroHabitacion = Request.Query["NúmeroHabitacion"];
+        string idInventario = Request.Query["IDInventario"];
         string connectionString = "Data Source=DESKTOP-2J8LJOL;Initial Catalog=Hotel;Integrated Security=True";
+
         using (SqlConnection connection = new SqlConnection(connectionString))
         {
             connection.Open();
 
-            string sql = "DELETE FROM Habitacion WHERE NumeroHabitacion = @NúmeroHabitacion";
+            string sql = "DELETE FROM Inventario WHERE IDInventario = @IDInventario";
+
             using (SqlCommand command = new SqlCommand(sql, connection))
             {
-                command.Parameters.AddWithValue("@NumeroHabitacion", numeroHabitacion);
+                command.Parameters.AddWithValue("@IDInventario", idInventario);
+
                 command.ExecuteNonQuery();
             }
         }
     }
     catch (Exception ex)
     {
-        // Manejo de errores (opcional)
+        // Manejo de errores
     }
-    Response.Redirect("/Client/Habitacion");
+    Response.Redirect("/Client/Inventario");
 }

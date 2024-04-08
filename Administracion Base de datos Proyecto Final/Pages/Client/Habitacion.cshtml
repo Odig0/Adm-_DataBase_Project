@@ -1,7 +1,6 @@
 ﻿@page
 @model Administracion_Base_de_datos_Proyecto_Final.Pages.Client.HabitacionModel
-@{
-}
+
 <br />
 <h2>Lista de Habitaciones</h2>
 
@@ -13,6 +12,7 @@
             <th>Hotel ID</th>
             <th>Tipo ID</th>
             <th>Estado</th>
+            <th>Acciones</th>
         </tr>
     </thead>
     <tbody>
@@ -25,7 +25,7 @@
                 <td>@item.Estado</td>
                 <td>
                     <a class="btn btn-primary btn-sm" href='/Client/Edit/EditHabitacion'>Editar</a>
-                    <a class="btn btn-primary btn-sm" href='/Client/DeleteHabitacion'>Borrar</a>
+                    <a class="btn btn-primary btn-sm" href='/Client/DeleteHabitacion?NumeroHabitacion=@item.NumeroHabitacion'>Borrar</a>
                 </td>
             </tr>
         }
