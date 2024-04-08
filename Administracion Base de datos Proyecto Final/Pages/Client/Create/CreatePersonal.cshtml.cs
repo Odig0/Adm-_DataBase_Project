@@ -77,7 +77,7 @@ namespace Administracion_Base_de_datos_Proyecto_Final.Pages.Client.Create
 
             successMessage = "Nuevo personal agregado";
 
-            Response.Redirect("/Client/Index");
+            Response.Redirect("/Client/Personal");
         }
     }
 }

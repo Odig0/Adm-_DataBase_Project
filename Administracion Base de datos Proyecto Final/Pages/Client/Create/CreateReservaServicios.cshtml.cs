@@ -57,7 +57,7 @@ namespace Administracion_Base_de_datos_Proyecto_Final.Pages.Client.Create
 
             successMessage = "Nueva reserva de servicio agregada";
 
-            Response.Redirect("/Client/Index");
+            Response.Redirect("/Client/ReservaServicios");
         }
     }
 }
